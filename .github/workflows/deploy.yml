@@ -19,31 +19,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '20'
 
-      - name: Clear npm cache
-        run: npm cache clean --force
-
-      - name: Clean install dependencies
+      - name: Install system dependencies
         run: |
-          rm -f package-lock.json
-          rm -rf node_modules
-          npm install
+          sudo apt-get update
+          sudo apt-get install -y python3 build-essential
+
+      - name: Install dependencies with rebuild
+        run: |
+          npm install --legacy-peer-deps
+          npm rebuild
 
       - name: Build with Vite
         run: npm run build
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
