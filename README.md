@@ -75,10 +75,3 @@ Culinary Engineering: Search the UI for local deployment environments involving 
 
 <b>[ <a href="https://www.google.com/search?q=https://linkedin.com/in/vaasunikhilbobba">LINKEDIN_UPLINK</a> ]</b> • <b>[ <a href="https://github.com/bobbanikhil">GITHUB_REPOSITORY</a> ]</b>
 </div>
-
-
-### Why this is a "Killer" README:
-
-1.  **The Terminal Aesthetic:** Using block quotes and code formatting for the header instantly sets a cyberpunk/tactical tone before they even click the link to the live site.
-2.  **Highlights the Exact Tech:** It explicitly mentions `React Three Fiber` and `Framer Motion` (which we know are in your `package.json` [cite: 75]). This tells technical recruiters immediately that you know how to handle complex 3D rendering and animations in React, rather than just basic HTML/CSS.
-3.  **No Clutter:** It removes all generic boilerplate language and unnecessary CI/CD badges, making the page look clean, intentional, and highly professional.` 
